@@ -1,0 +1,77 @@
+﻿@model IEnumerable<JSLesson>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>JavaScript Lessons</h1>
+
+@*<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Overview
+            </th>
+            <th>
+                Body
+            </th>
+            <th>
+                Practice
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var obj in Model)
+        {
+            <tr>
+                <td>
+                    @obj.ID
+                </td>
+                <td>
+                    @obj.Name
+                </td>
+                <td>
+                    @obj.Overview
+                </td>
+                <td>
+                    @obj.Body
+                </td>
+                <td>
+                    @obj.Practice
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>*@
+
+<table class="table lessons-table" style="width:100%">
+    <thead>
+        <tr>
+            <th style="width: 30%;">
+                Name
+            </th>
+            <th>
+                Overview
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var obj in Model)
+        {
+            <tr>
+                <td style="width: 30%;">
+                    <a asp-action="Details" asp-route-id="@obj.ID">@obj.Name</a>
+                </td>
+                <td>
+                    @Html.Raw(@obj.Overview)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,123 @@
+﻿
+@model IEnumerable<Course>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@*<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>*@
+
+<section class="main">
+    <h2>Esteem in your coding is in our hands.</h2>
+</section>
+
+        <section class="choose-us">
+            <div class="img">
+                <img src="assets/img/studying-pic.png" alt="Why choose our platform for studying?">
+            </div>
+
+            <div class="txt">
+                <h3>Why choose us?</h3>
+
+                <div class="info">
+                    <p>Code-Es TEAM is the project that will make your dream of becoming a fron-end web developer to come true. Quality courses and fun practices are targeted onto changing the boring learning into the motivating one.</p>
+                    <p>These courses will give you the basic understanding of how the front-end sphere in web development is operating. Crash courses will allow to gain all the needed information in the fastest available time.</p>
+                    <p>Just let yourself to dive into this magical world, and your life will never be the same again.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular-courses">
+            <h3>Our Popular Courses</h3>
+
+            <div class="courses">
+        @foreach(var obj in Model)
+        {
+            <div class="course">
+                    <div class="crs-img @obj.LinkName-img"></div>
+
+                    <div class="txt">
+                        <h4><a asp-area="" asp-controller="@obj.LinkName" asp-action="Index">@obj.Name</a></h4>
+
+                        <p>@obj.Description</p>
+                    </div>
+
+                    <div class="description">
+                        <div class="hrs">
+                            <i class="far fa-clock"></i>
+                            <span>@obj.OneLessonTime Minutes</span>
+                        </div>
+
+                        <div class="calndr">
+                            <i class="far fa-calendar"></i>
+                            <span>@obj.TimeToComplete Hours</span>
+                        </div>
+
+                        <div class="modules">
+                            <i class="fas fa-book"></i>
+                            <span>@obj.LessonsNumber Modules</span>
+                        </div>
+                    </div>
+                </div>
+        }
+    </div>
+        </section>
+
+@*<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Course Name
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Lesson Time
+            </th>
+            <th>
+                Course Time
+            </th>
+            <th>
+                Number of Lessons
+            </th>
+            <th>
+                Link Name
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var obj in Model)
+        {
+            <tr>
+                <td>
+                    @obj.ID
+                </td>
+                <td>
+                    @obj.Name
+                </td>
+                <td>
+                    @obj.Description
+                </td>
+                <td>
+                    @obj.OneLessonTime
+                </td>
+                <td>
+                    @obj.TimeToComplete
+                </td>
+                <td>
+                    @obj.LessonsNumber
+                </td>
+                <td>
+                    @obj.LinkName
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>*@

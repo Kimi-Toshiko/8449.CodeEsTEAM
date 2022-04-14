@@ -1,0 +1,56 @@
+.lessons-table {
+    margin-top: 5%;
+}
+
+
+    .lessons-table thead {
+        background-color: #d5efff;
+        height: 4rem;
+        text-align: center;
+        border-bottom: 2px dashed #69a5c9;
+    }
+
+        .lessons-table thead th {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+
+            .lessons-table thead th:first-child {
+                border-right: 1px dashed var(--main-color);
+            }
+
+    .lessons-table tbody td a {
+        color: #000;
+        text-decoration: none;
+    }
+
+        .lessons-table tbody td a:hover {
+            color: var(--darker-main-color);
+            transition: .3s;
+        }
+
+    .lessons-table tbody td {
+        text-align: center;
+    }
+
+        .lessons-table tbody td:first-child {
+            font-size: 1.1rem;
+            font-weight: bold;
+            font-family: var(--poppins-font);
+        }
+
+h4.course-title {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    border-bottom: none;
+    text-align: center;
+}
+
+dd.col-sm-10.lesson-title {
+    font-family: var(--quintessential-font);
+    font-weight: bold;
+    font-size: 1.5rem;
+    /* border-right: 2px solid var(--main-color); */
+    border-left: 2px solid var(--main-color);
+    margin: 1rem;
+}
